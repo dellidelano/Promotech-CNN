@@ -2,7 +2,7 @@
 Bacteria Promoter Prediction Tool using Convolution Neural Networks. This tool was built using Python 3.8.2.
 
 The code uses a single class that is able to read fasta files to retrieve bacteria sequences for processing.
-The architecture of the Convolution Neural Network was guided by the BPNet architecture found at https://www.nature.com/articles/s41588-021-00782-6, however, this solution does not use as many layers and have several tweeks in architecture.
+The architecture of the Convolution Neural Network was guided by the BPNet architecture found at https://www.nature.com/articles/s41588-021-00782-6, however, this solution does not use as many layers and have several tweeks in architecture. A link to the report for this particular architecture will be shared at a later date. 
 
 
 You may run the code from scratch using the following instructions or import the H5 file and start predicting. The output from the predicitons are written to the execution directory.
