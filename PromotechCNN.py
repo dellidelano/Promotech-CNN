@@ -298,7 +298,7 @@ class PromotechCNN:
             pred2 = prediciton2[1]
 
             with open(fastaFile, 'w') as writeFile:
-                writeFile.write("Seq,True,Neg_C,Pos_C,Pred\n")
+                writeFile.write("Seq,Base,Neg_C,Pos_C,Pred\n")
 
                 #Negative file
                 pos = 0
@@ -317,7 +317,7 @@ class PromotechCNN:
                     pos +=1
 
         with open("All_bacteria_prediction.csv", 'w') as writeFile:
-            writeFile.write("Seq,True,Neg_C,Pos_C,Pred+\n")
+            writeFile.write("Seq,Base,Neg_C,Pos_C,Pred\n")
             for line in mainPredictionOutput:
                 writeFile.write(line)
             
