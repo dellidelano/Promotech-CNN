@@ -7,7 +7,8 @@ The architecture of the Convolution Neural Network was guided by the BPNet archi
 
 You may run the code from scratch using the following instructions or import the H5 file and start predicting. The output from the predicitons are written to the execution directory.
 
-#########################Code for setting up and testing ###############################
+#########################Code for setting up and testing ############################################
+
 from PromotechCNN import PromotechCNN
 code = PromotechCNN()
 
