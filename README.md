@@ -19,7 +19,9 @@ code.buildData()
 print("------RUNNING EPOCH 100------")
 code.buildBPNet(100)
 
-print("Running Predictions...")
+print("Running Predictions from validation set...")
 code.predictValidation("/ValidationData/40nt-sequences/bacteria-1-1-ratio")
 
+print("Making predcition on an input fasta file")
+code.predictSequenceFile("BACILLUS_negative.fasta")
 ###########################################################################################
