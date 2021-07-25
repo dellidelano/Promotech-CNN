@@ -322,3 +322,20 @@ class PromotechCNN:
                 writeFile.write(line)
             
 
+    #Predict sequence from a file
+    def predictSequenceFile(self, filename):
+
+        prediction = self.predictData(filename)
+        seq = prediction[0]
+        pred = prediction[1]
+
+        with open(filename+"_prediction.csv", 'w') as writeFile:
+            writeFile.write("Seq,Neg_C,Pos_C,Pred\n")
+
+            pos = 0
+            for item in pred:
+                choice = item.tolist().index(np.amax(item))
+                writeFile.write(seq[pos] + "," + str(item[0]) + "," + str(item[1]) +  "," + str(choice) + "\n")
+                pos += 1
+    
+
