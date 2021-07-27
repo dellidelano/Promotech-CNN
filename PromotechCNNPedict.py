@@ -38,4 +38,3 @@ else:
     print("Making prediciton on fasta file", fasta_File)
     code.predictSequenceFile(fasta_File)
 
-
