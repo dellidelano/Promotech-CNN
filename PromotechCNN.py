@@ -1,4 +1,5 @@
-#Creating a class to handle the Convolution Neural Network
+#Class module to handle the Convolution Neural Network building and training
+#including Sequence conversion.
 #Author: Delano Thomas
 #Email; dmthomas@mun.ca
 #COMP6999 - Researh Project
@@ -27,7 +28,6 @@ class PromotechCNN:
         self.homeDir = os.getcwd()
 
         #Directory for training data
-        #self.trainDir = self.homeDir + "/TrainingData/40nt-sequences"
         self.trainDir = self.homeDir + ""
         self.ValidateDir = self.homeDir + ""
 
@@ -207,7 +207,6 @@ class PromotechCNN:
         es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=5)
 
         #Training the model
-        #history = self.model.fit(np.array(self.trainData_X), np.array(self.trainData_Y), epochs=epoch, verbose=0, shuffle=True, callbacks=[es])
         history = self.model.fit(self.X_train, self.y_train, epochs=epoch, verbose=0, validation_data=(self.X_test, self.y_test), shuffle=True, callbacks=[es])
         print(history.history)
 
@@ -226,7 +225,6 @@ class PromotechCNN:
         with open(outputFile, 'w') as writeFile:
             writeFile.write("Seq,Base,Neg_C,Pos_C\n")
             for item in predicted_action:
-                #choice = item.tolist().index(np.amax(item))
                 writeFile.write(self.convertToSequence(self.X_test[pos]) + "," + str(self.y_test[pos]) + ","  + str(item[0]) + "," + str(item[1]) + "\n")
                 pos += 1
 
