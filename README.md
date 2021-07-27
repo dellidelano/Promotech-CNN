@@ -4,17 +4,17 @@ The body of the code was built using a Class module that read fasta files to ret
 A link to the report for this particular architecture will be shared at a later date.
 
 Environment:
-Operating System: Linux
-Python: 3.8.2
-tensorflow: 2.5.0
-numpy: 1.2.0
-pandas: 1.2.4
+	Operating System: Linux
+	Python: 3.8.2
+	tensorflow: 2.5.0
+	numpy: 1.2.0
+	pandas: 1.2.4
 
 
 About the Files:
-Promotech-CNN-20210720.h5 - H5 module built from the trained network. This is loaded during predictions
-PromotechCNN.py	- Base Class module that is used to build and train a netwok if required. It handles promoter sequence conversion before they are fed into the Neural Network. The main prediction method is processed here.
-PromotechCNNPedict.py - Main file to load CNN module and run predictions on the input file
+	Promotech-CNN-20210720.h5 - H5 module built from the trained network. This is loaded during predictions
+	PromotechCNN.py	- Base Class module that is used to build and train a netwok if required. It handles promoter sequence conversion before they are fed into the Neural Network. The main prediction method is processed here.
+	PromotechCNNPedict.py - Main file to load CNN module and run predictions on the input file
 
 Making Predictions:
 - Predictions are made after loading the H5 data file and then running the prediction on an input promoter sequence file.
