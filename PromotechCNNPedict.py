@@ -2,7 +2,7 @@
 #Author: Delano Thomas
 #Email; dmthomas@mun.ca
 #COMP6999 - Researh Project
-#July 7, 2021
+#July 27, 2021
 
 #Setup the environment library
 from PromotechCNN import PromotechCNN
